@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교본 공유 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        li {
+            width: calc(12.5% - 5px); /* 2개씩 표시, 간격은 5px */
+            margin-bottom: 10px;
+            background-color: #fff;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>교본 공유 페이지</h1>
+    </header>
+
+    <main>
+        <label for="bookTitle">교본 제목:</label>
+        <input type="text" id="bookTitle" placeholder="교본의 제목을 입력하세요">
+
+        <label for="bookContent">교본 내용:</label>
+        <textarea id="bookContent" rows="6" placeholder="교본의 내용을 입력하세요"></textarea>
+
+        <ul>
+            <li><a href="https://dlxogns1213.github.io/badook/">바둑판</a></li>
+        </ul>
+
+        <button onclick="shareBook()">교본 공유하기</button>
+
+    </main>
+
+    <script>
+        function shareBook() {
+            // 사용자가 입력한 교본 제목과 내용 가져오기
+            const title = document.getElementById('bookTitle').value;
+            const content = document.getElementById('bookContent').value;
+
+            // 교본을 어딘가에 저장하거나 서버로 전송하는 로직을 추가할 수 있습니다.
+            // 여기서는 간단히 콘솔에 출력하는 예시를 보여줍니다.
+            console.log('교본 제목:', title);
+            console.log('교본 내용:', content);
+
+            // 교본이 성공적으로 저장되었다면 사용자에게 알림을 표시할 수 있습니다.
+            alert('교본이 성공적으로 공유되었습니다!');
+        }
+    </script>
+
+</body>
+</html>
